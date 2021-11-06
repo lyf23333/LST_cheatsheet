@@ -1,0 +1,144 @@
+
+% Reference: https://tex.stackexchange.com/questions/8827/preparing-cheat-sheets/8915
+
+% Package imports.
+\documentclass[10pt,landscape]{article}
+\usepackage{multicol}
+\usepackage{calc}
+\usepackage{ifthen}
+\usepackage[landscape, a4paper]{geometry}
+\usepackage{amsmath,amsthm,amsfonts,amssymb}
+\usepackage{color,graphicx,overpic}
+\usepackage{hyperref}
+
+% Sets page margins.
+\geometry{top=.2in,left=.2in,right=.2in,bottom=.2in}
+
+% Turns off header and footer.
+\pagestyle{empty}
+
+% Redefine section commands to use less space and have smaller text.
+% (Can change font size if `\tiny` is too small.
+% See http://www.sascha-frank.com/latex-font-size.html as a reference.)
+\makeatletter
+\renewcommand{\section}{\@startsection{section}{1}{0mm}%
+                                {-0.5ex plus -.5ex minus -.2ex}%
+                                {-0.5\baselineskip}%
+                                {\normalfont\small\bfseries}}
+\renewcommand{\subsection}{\@startsection{subsection}{2}{0mm}%
+                                {-0.5ex plus -.5ex minus -.2ex}%
+                                {-0.5\baselineskip}%
+                                {\normalfont\small\bfseries}}
+\renewcommand{\subsubsection}{\@startsection{subsubsection}{3}{0mm}%
+                                {-0.5ex plus -.5ex minus -.2ex}%
+                                {-0.5\baselineskip}%
+                                {\normalfont\small\bfseries}}
+\renewcommand{\paragraph}{\@startsection{paragraph}{4}{0mm}%
+                                {-0.5ex plus -.5ex minus -.2ex}%
+                                {-0.5\baselineskip}%
+                                {\normalfont\small\bfseries}}
+\makeatother
+
+% No section numbers.
+\setcounter{secnumdepth}{0}
+
+% Minimal paragraph indenting and spacing.
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt plus 0.5ex}
+
+% Canonical "init" statement.
+\begin{document}
+
+% Don't start new paragraphs if you don't need to.
+\raggedright
+
+% Font size.
+\scriptsize
+
+% Specifying number of columns.
+% Asterisk "*" here to force the left-most column to fill first, then the next, ect.
+% (Otherwise, all columns would fill down "equally".
+\begin{multicols*}{4}
+
+% Can play around with these as desired.
+\setlength{\columnseprule}{0.25pt}
+\setlength{\premulticols}{0.25pt}
+\setlength{\postmulticols}{0.25pt}
+\setlength{\multicolsep}{0.25pt}
+\setlength{\columnsep}{0.25pt}
+
+% This is the "magic" pandoc variable. (This is where your Rmarkdown document is inserted.)
+\section{Linear Algebra}
+
+1. $Injective$ iff f(x1) = f(x2) implies that x1 = x2.\\
+2. $Surjective$ iff for all $y \in Y$ there exists $x \in X$ such that y = f(x).\\
+3. $Bijective$ iff it is both injective and surjective, i.e. for all $y \in Y$ there exists a unique $x \in X$ such that y = f(x).\\
+
+1. f has a left inverse iff it is injective.\\
+2. f has a right inverse iff it is surjective.\\
+3. f is invertible iff it is bijective.\\
+4. If f is invertible then any two inverses (left-, right- or both) coincide.\\
+
+\textbf{Group} (G, *):\\
+1. $Associative \forall a, b, c \in G, a * (b * c) = (a * b) * c$.\\
+2. $Identity: \exists e \in G, \forall a \in G, a * e = e * a = a.$\\
+3. $Inverse: \forall a \in G, \exists a^{-1} \in G, a * a ^{-1} = a^{-1} * a = e.$\\
+(G, *) is commutative (or Abelian) iff in addition to 1-3:\\
+4. $Commutative: \forall a, b \in G, a * b = b * a.$\\
+
+\textbf{Ring} (R, +, $\cdot$):\\
+$+: associative, identity, inverse, communtative$\\
+$\cdot : associative, identity$\\
+$distributive: a \cdot (b+c) = a \cdot b + a \cdot c and (b + c) \cdot a = b \cdot a + c \cdot a$\\
+
+\textbf{Field} is a $communitative\ Ring$ that in addition satisfies $Multiplication\ inverse.$\\
+
+\textbf{Linear Space} $(V, F, \oplus, \odot)$:
+$\oplus: associative, identity, inverse, communtative (V!!)$\\
+$\odot: associative \forall a,b \in F, x \in V, a \odot (b \odot x) = (a \cdot b) \odot x$
+$inverse \forall x \in V, 1 \odot x = x$\\
+$Distributive: \forall a, b \in F, \forall x,y \in V, (a+b) \odot x = (a \odot x) \oplus (b \odot x) and (a \odot (x \oplus y) = (a \odot x) \oplus (a \odot y)$\\
+
+\textbf{Product Space} $If (V, F, \oplus V , \odot V ) and (W, F, \oplus W , \odot W)$ are linear spaces over the same field, the product space $(V \times W, F, \oplus, \odot)$ is the linear space comprising all pairs $(v, w) \in V \times W with \oplus defined\ by (v1, w1) \oplus (v2, w2) = (v1 \oplus v2, w1 \oplus w2), and \odot defined by a \odot (v, w) = (a \odot V v, a \odot W w).$\\
+
+\textbf{Subspace} Let $(V, F)$ be a linear space and $W \subseteq V.\ (W, F)$ is a linear subspace of V iff it's a L.S. i.e. $\forall w_1,w_2 \in W, a_!, a_2 \in F,$ we have $a_1w_1 + a_2w_2 \in W$.\\
+
+*In $\mathbb{R} ^ 3$, all subspaces are $\mathbb{R} ^ 3$, 2D planes through the origin, 1D lines through the origin, \{0\}.\\
+
+$\textbf{SPAN(S)}  = \{ \sum_{i=1}^{n} a_iv_i |a_i \in F, v_i \in S, i = 1...n \} $\\
+
+Let $(V, F)$ a L.S.. A set of vectors $S \subseteq V$ is a \textbf{basis} of (V, F) iff linearly independent and Span(S) = V .\\
+
+If a basis of (V, F) with a finite number of elements
+exists, the number of elements of this basis is dimension of (V, F) and (V, F) is
+\underline{finite dimensional}. Otherwise, infinite dimensional.
+
+\textbf{Linear Map}: Given $(U, F)$ and $(V, F)$, the function $\mathcal{A}: U \to V$ is a linear map iff $\forall u_1,u_2 \in U, a_1,a_2 \in F,$ we have $\mathcal{A}(a_1u_1 + a_2u_2) = a_1\mathcal{A}(u_1) + a_2\mathcal{A}(u_2)$.\\
+Let $\mathcal{A}: U \to V$ linear. 
+$\textbf{NULL}(\mathcal{A}) = \{ u \in U |\mathcal{A}(u)=\theta_V \} \subseteq U$ (Nullity)\\
+$\textbf{RANGE}(\mathcal{A}) = \{  v \in V | \exists u \in U: v = \mathcal{A}(u) \} \subseteq V$ (rank)\\
+
+*1. A vector $u \in U$ s.t. $\mathcal{A}(u) = b$ exists iff $b \in RANGE(\mathcal{A}). \mathcal{A}$ is  surjective iff $RANGE(\mathcal{A})=V.$\\
+*2. If $b \in RANGE(\mathcal{A})$ and for some $u_0 \in U$ we have that $\mathcal{A}(u_0) = b$ then for all $u \in U: \mathcal{A}(u)=b \Leftrightarrow $  $ u = u_0 + z$ with $z\in NULL(\mathcal{A})$ \\
+*3. $\mathcal{A}$ is injective iff $NULL(\mathcal{A})=\{ \theta_U \}$\\
+
+\textbf{Rank} and \textbf{Nullity}: Let $\mathcal{A} \in F^{n \times m}$ and $B \in F^{m \times p}$.\\
+1. $RANK(\mathcal{A}) + NULLITY(\mathcal{A}) = m$.\\
+2. $0 \leq RANK(\mathcal{A}) \leq min\{m,n\}$.\\
+3. $ RANK(\mathcal{A}) + RANK(\mathcal{B}) - m \leq RANK(\mathcal{AB}) \leq min\{RANK(\mathcal{A}), RANK(\mathcal{B})\}$.\\
+4. If $P \in F^{m\times m, Q \in F^{n \times n}}$ are \underline{invertible},\\
+ $RANK(\mathcal{A}) = RANK(\mathcal{AP}) =RANK(\mathcal{QA}) =RANK(\mathcal{QAP})$ (also Nullity)\\
+5. If $\mathcal{A}(x)=Ax, A \in F^{n \times n}$, we have 
+$\mathcal{A}\ invertible \Leftrightarrow $ $bijective \Leftrightarrow injective \Leftrightarrow surjective \Leftrightarrow RANK(A) = n$.\\
+ 
+\textbf{Eigenvector}: 
+1. There exists $v \in \mathbb{C}^n$ s.t. $v \neq 0$ and $Av = \lambda v$. v is called \textbf{right eigenvector}.\\
+2. There exists $\eta \in \mathbb{C}^n$ s.t. $\eta \neq 0$ and $\eta ^T A = \lambda \eta ^T$. $ \eta$ is called \textbf{left eigenvector}.\\
+
+\textbf{SPEC}[A] = $\{ \lambda_1,....,\lambda_n\}.$\\
+
+
+% `\end` statements to match the `\begin`s.
+\end{multicols*}
+
+\end{document}
