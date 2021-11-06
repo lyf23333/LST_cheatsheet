@@ -235,6 +235,45 @@ $\parallel \int_{t_0}^{t_1} f(t) dt \parallel \leq | \int_{t_0}^{t_1} \parallel 
 
 
 
+\newpage
+\section{4. Time varying linear systems}
+$\dot{x}(t) = f(x(t), u(t)) = A(t)x(t) + B(t)u(t)$ \qquad (1)\\
+$y(t) = h(x(t), u(t)) = C(t)x(t) + D(t)u(t)$ \qquad (2)\\
+where $x(t) \in \mathcal{R}^n$, $u(t) \in \mathcal{R}^m$, $x(t) \in \mathcal{R}^p$, \\
+$A(\cdot):  \mathcal{R} \rightarrow \mathcal{R}^{n \times n}$, $B(\cdot):  \mathcal{R} \rightarrow \mathcal{R}^{n \times m}$, $C(\cdot):  \mathcal{R} \rightarrow \mathcal{R}^{p \times n}$, $D(\cdot):  \mathcal{R} \rightarrow \mathcal{R}^{p \times m}$ \\
+\textbf{Linearization perturbation}\\
+$x(t) = x^*(t) + e_x(t)$, $y(t) = x^*(t) + e_y(t)$\\
+\textbf{Taylor extension of LVT}
+$\dot{x}(t) = f(x^*(t)+e_x(t), u^*(t)+e_u(t))=f(x^*(t), u^*(t))+\frac{\partial{f}}{\partial{x}}(x^*(t), u^*(t))e_x(t)+\frac{\partial f}{\partial u}(x^*(t), u^*(t))e_u(t)$  + higher order terms\\
+where 
+$
+\frac{\partial{f}}{\partial{x}}(x^*(t), u^*(t)) = \left[ \begin{array}{ccc} \frac{\partial{f_1}}{\partial{x_1}}(x^*(t), u^*(t)) & \cdots & \frac{\partial{f_1}}{\partial{x_n}}(x^*(t), u^*(t))\\
+\vdots & \ddots & \vdots \\
+\frac{\partial{f_n}}{\partial{x_1}}(x^*(t), u^*(t)) & \cdots & \frac{\partial{f_n}}{\partial{x_n}}(x^*(t), u^*(t))
+\end{array} \right] = A(t)
+$,\\
+$
+\frac{\partial{f}}{\partial{u}}(x^*(t), u^*(t)) = \left[ \begin{array}{ccc} \frac{\partial{f_1}}{\partial{u_1}}(x^*(t), u^*(t)) & \cdots & \frac{\partial{f_1}}{\partial{u_m}}(x^*(t), u^*(t))\\
+\vdots & \ddots & \vdots \\
+\frac{\partial{f_n}}{\partial{u_1}}(x^*(t), u^*(t)) & \cdots & \frac{\partial{f_n}}{\partial{u_m}}(x^*(t), u^*(t))
+\end{array} \right] = B(t)
+$\\
+$\frac{d}{dt}(e_x(t))=A(t)e_x(t)+B(t)e_u(t)$\\
+\textbf{Existence and structure of solutions}
+\begin{tabular}{|c|c|c|c|}
+\hline
+ & $(X, \mathbb{R})$ & $(U, \mathbb{R})$ & $(Y, \mathbb{R})$\\
+\hline
+base & $ \{ e_i \}_{i=1}^n $ & $\{f_i\}_{i=1}^m $ & $\{g_i\}_{i=1}^p $\\
+\hline
+dim. & n & m & p\\
+\hline
+\end{tabular}\\
+\textit{Assump 4.1}: $A(\cdot)$, $B(\cdot)$, $C(\cdot)$, $D(\cdot)$ are piecewise continuous.
+\textit{Fact 4.1}: For all $u(\cdot): \mathbb{R} \rightarrow \mathbb{R}^m$ piecewise continuous and all $(t_0, x_0) \in \mathbb{R} \times \mathbb{R}_n$ there exists \textsc{unique} solution $x(\cdot):  \rightarrow \mathbb{R}^n$ and $y(\cdot):  \rightarrow \mathbb{R}^p$ for the system (1) and (2).\\
+The unique solution of (1) and (2)\\
+\textbf{State transition matrix}: $x(t) = s(t, t_0, x_0, u)$,\\
+\textbf{Output response map}: $y(t) = \rho(t, t_0, x_0, u)$
 % `\end` statements to match the `\begin`s.
 \end{multicols*}
 

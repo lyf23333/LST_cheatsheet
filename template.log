@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.5.27)  7 NOV 2021 00:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.5.27)  7 NOV 2021 00:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -524,7 +524,7 @@ File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <7> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 109.
-<pictures/basis.png, id=12, 585.68813pt x 72.77188pt>
+<pictures/basis.png, id=16, 585.68813pt x 72.77188pt>
 File: pictures/basis.png Graphic file (type png)
 <use pictures/basis.png>
 Package pdftex.def Info: pictures/basis.png  used on input line 146.
@@ -532,33 +532,42 @@ Package pdftex.def Info: pictures/basis.png  used on input line 146.
  [1
 
 {c:/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./pictures/basi
-s.PNG>] (./template.aux)
-Package rerunfilecheck Info: File `template.out' has not changed.
-(rerunfilecheck)             Checksum: 38697EAAE41DDA8C9770D0977A4A43DF;237.
+s.PNG>] [2]
+(./template.aux)
+
+Package rerunfilecheck Warning: File `template.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `template.out':
+(rerunfilecheck)             Before: 2232F7C54A5480CA5FF37B337E3E6970;166
+(rerunfilecheck)             After:  C832CDEFA8D9E623E1AF419EFEE8882B;443.
  ) 
 Here is how much of TeX's memory you used:
- 9889 strings out of 478754
- 142216 string characters out of 5858221
+ 9897 strings out of 478754
+ 142294 string characters out of 5858221
  502023 words of memory out of 5000000
- 27471 multiletter control sequences out of 15000+600000
- 406286 words of font info for 38 fonts, out of 8000000 for 9000
+ 27475 multiletter control sequences out of 15000+600000
+ 406936 words of font info for 40 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,6n,66p,444b,490s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,10n,66p,444b,491s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/tex
 live/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb><c:/texlive/2021/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb><c:/texlive/2021/texmf-dist
-/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><c:/texlive/2021/texmf-dist/font
-s/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmmi7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmr5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7
-.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><c:/t
-exlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/202
-1/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb><c:/texlive/2021/tex
-mf-dist/fonts/type1/public/cm-super/sfrm0700.pfb>
-Output written on template.pdf (1 page, 172485 bytes).
+/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><c:/texlive/2021/texmf-dist/fonts/t
+ype1/public/amsfonts/cmextra/cmex7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmmi5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmmi7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mr5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:
+/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><c:/texlive/2
+021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2021/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmti7.pfb><c:/texlive/2021/texmf-dist/fonts
+/type1/public/amsfonts/symbols/msbm7.pfb><c:/texlive/2021/texmf-dist/fonts/type
+1/public/cm-super/sfrm0700.pfb>
+Output written on template.pdf (2 pages, 196388 bytes).
 PDF statistics:
- 70 PDF objects out of 1000 (max. 8388607)
- 53 compressed objects within 1 object stream
- 4 named destinations out of 1000 (max. 500000)
- 22 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 86 PDF objects out of 1000 (max. 8388607)
+ 66 compressed objects within 1 object stream
+ 6 named destinations out of 1000 (max. 500000)
+ 30 words of extra memory for PDF output out of 10000 (max. 10000000)
 
