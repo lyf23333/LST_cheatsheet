@@ -10,6 +10,9 @@
 \usepackage{amsmath,amsthm,amsfonts,amssymb}
 \usepackage{color,graphicx,overpic}
 \usepackage{hyperref}
+\newenvironment{Figure}
+{\par\medskip\noindent\minipage{\linewidth}}
+{\endminipage\par\medskip}
 
 % Sets page margins.
 \geometry{top=.2in,left=.2in,right=.2in,bottom=.2in}
@@ -68,7 +71,7 @@
 \setlength{\columnsep}{0.25pt}
 
 % This is the "magic" pandoc variable. (This is where your Rmarkdown document is inserted.)
-\section{Linear Algebra}
+\section{2. Linear Algebra}
 
 1. $Injective$ iff f(x1) = f(x2) implies that x1 = x2.\\
 2. $Surjective$ iff for all $y \in Y$ there exists $x \in X$ such that y = f(x).\\
@@ -137,6 +140,37 @@ $\mathcal{A}\ invertible \Leftrightarrow $ $bijective \Leftrightarrow injective 
 
 \textbf{SPEC}[A] = $\{ \lambda_1,....,\lambda_n\}.$\\
 
+\begin{Figure}
+	\centering
+	\includegraphics[width=\linewidth]{pictures/basis.png}
+\end{Figure}
+
+
+\textbf{Change of basis}: $ \mathcal{A}* = P \cdot A \cdot Q $
+
+\section{3. Analysis}
+\textbf{Norm}:1.$\forall v_1,v_2 \in V, \parallel v_1+v_2 \parallel \leq \parallel v_1 \parallel + \parallel v_2 \parallel$\\
+2.$\forall v \in V, \forall a \in F, \parallel av \parallel =|a| \cdot \parallel v \parallel$\\
+3.$\parallel v \parallel = 0 \Leftrightarrow v=0$\\
+\textbf{Normed Linear Space}: $(V,F,\parallel \cdot \parallel)$\\
+$\parallel x \parallel_1 = \sum_{i=1}^{n} |x_i|,$\\
+$\parallel x \parallel_2 = \sqrt{\sum_{i=1}^{n} |x_i|^2},$\\
+$\parallel x \parallel_p = (\sum_{i=1}^{n} |x_i|^p)^{\frac{1}{p}},$\\
+$\parallel x \parallel_\infty = max |x_i|.$\\
+
+\textbf{Ball}: Given $(V,F,\parallel \cdot \parallel)$, the \textbf{ball} of radius $r \in \mathbb{R}_+$ centered at $v \in V$ is $B(v,r) = \{ v' \in V | \parallel v - v' \parallel \leq r\}$.\\
+$B(0,1) is$ \textbf{unit ball}.\\
+\textbf{Bound}: $S \subseteq V$ is \textbf{bounded} if $S \subseteq B(0,r)$ for some r.\\
+\textbf{Convergence}: Let (V, F, $\parallel \cdot \parallel$) be a normed space. A function v : N → V is called a sequence in V. The sequence converges to a point $\overline{v} \in V$ iff $\forall \epsilon > 0, \exists N \in \mathbb{N}, \forall m \geq N, \parallel v(m)-\overline{v} \parallel < \epsilon$\\
+
+In this case, $\overline{v}$ is the \textbf{limit} of the sequence.\\
+\textbf{Close}: iff all a set contains all its limit points.\\
+\textbf{Open}: iff V\ K is closed.\\
+
+\textbf{Compact}: Closed + Bounded.\\
+
+\textbf{Continuous}: f is continuous at $u \in U$ iff
+$\forall \epsilon > 0\ \exists \delta >0 s.t. \parallel u-u' \parallel_U < \delta \rightarrow \parallel f(u)-f(u') \parallel_U < \delta $
 
 % `\end` statements to match the `\begin`s.
 \end{multicols*}
