@@ -107,6 +107,7 @@ $Distributive: \forall a, b \in F, \forall x,y \in V, (a+b) \odot x = (a \odot x
 \textbf{Subspace} Let $(V, F)$ be a linear space and $W \subseteq V.\ (W, F)$ is a linear subspace of V iff it's a L.S. i.e. $\forall w_1,w_2 \in W, a_!, a_2 \in F,$ we have $a_1w_1 + a_2w_2 \in W$.\\
 
 *In $\mathbb{R} ^ 3$, all subspaces are $\mathbb{R} ^ 3$, 2D planes through the origin, 1D lines through the origin, \{0\}.\\
+*Any finite-dimensional subspace W of a linear space  $(V,F,\parallel \cdot \parallel)$ is a closed subset of V.
 
 $\textbf{SPAN(S)}  = \{ \sum_{i=1}^{n} a_iv_i |a_i \in F, v_i \in S, i = 1...n \} $\\
 
@@ -170,7 +171,69 @@ In this case, $\overline{v}$ is the \textbf{limit} of the sequence.\\
 \textbf{Compact}: Closed + Bounded.\\
 
 \textbf{Continuous}: f is continuous at $u \in U$ iff
-$\forall \epsilon > 0\ \exists \delta >0 s.t. \parallel u-u' \parallel_U < \delta \rightarrow \parallel f(u)-f(u') \parallel_U < \delta $.
+$\forall \epsilon > 0\ \exists \delta >0 s.t. \parallel u-u' \parallel_U < \delta \rightarrow \parallel f(u)-f(u') \parallel_U < \epsilon $.\\
+$f$ is continuous on U iff it's continuous everywhere.\\
+*All linear functions between finite dimensional spaces are always continuous.\\
+
+\textbf{Equivalence}:Consider a L.S. (V, F) with two norms, $\parallel \cdot \parallel_a$ and $\parallel \cdot \parallel_b$.. Th two norms are equivalent iff\\
+$\exists m_u \geq m_l \geq 0, \forall v \in V\ m_l\parallel v \parallel_a \leq \parallel v \parallel_b \leq \parallel v \parallel_a$.\\ 
+
+\textbf{Weierstrass Theorem}: If $f: S \rightarrow \mathbb{R}$ is \underline{continuous} and set S is \underline{compact}, then $f$ attains a minimum on $S$.\\
+
+\textbf{Cauchy Inequality}: $ (\sum_{i=1}^{n} a_i b_i)^{2} \leq (\sum_{i=1}^{n} a_i^2)(\sum_{i=1}^{n} b_i^2) $\\
+Any two norms on a finite-dimensional space V are equivalent.\\
+
+\textbf{Infinite-dimensional normed space}: \\
+$\parallel f(t) \parallel_1 = \int_{t_0}^{t_1} \parallel f(t) \parallel_2 \,dt,$\\
+$\parallel f(t) \parallel_2 = \sqrt{\int_{t_0}^{t_1} \parallel f(t) \parallel_2 ^2 \,dt},$\\
+$\parallel f(t) \parallel_p = (\int_{t_0}^{t_1} \parallel f(t) \parallel_2 ^p \,dt)^{\frac{1}{p}},$\\
+$\parallel f(t) \parallel_\infty = max \parallel f(t) \parallel_2.$\\
+*Replacing $\parallel f(t) \parallel_2$ by another norm on $\mathbb{R}^n$ in the $\int_{t_0}^{t_1} \,dt$ and the $max$ are equivalent to the ones above.\\
+
+\textbf{Cauchy Sequence}: $\{v_i\}_{i=0} ^\infty$ is a C.S. iff\\
+$\forall \epsilon >0\ \exists N \in \mathbb{N}\ \forall m \geq N, \parallel v_m-n_N \parallel < \epsilon$.\\
+*Every convergent Sequence is Cauchy.\\
+
+\textbf{Complete}: The normed space $(V, F, \parallel \cdot \parallel)$ is complete (or \textbf{Banach}) iff every Cauchy sequence converges.\\
+*Let $F = \mathbb{R}$ or $F = \mathbb{C}$ and if $(V,F)$ is finite-dimensional. Then $(V,F,\parallel \cdot \parallel)$ is a Banach Space for any norm $\parallel \cdot \parallel.$\\
+*Many function spaces might not be Banach, but $(C([t_0,t_1], \mathbb{R}^n), \mathbb{R}, \parallel \cdot \parallel_\infty)$ is a Banach space.
+
+\textbf{Induced Norm}: $\parallel f \parallel = $ \(\sup_{u \neq 0}\) $ \frac {\parallel f(u) \parallel_V}{\parallel u \parallel_U}$\\
+*$\parallel \mathcal{A} \parallel = $ \(\sup_{\parallel u \parallel_U = 1}\) $ \parallel \mathcal{A}(u) \parallel_V$\\
+$\parallel A \parallel_1 = max_{j = 1,...,n} \sum_{i=1}^{m} |a_{ij}| $ (max column sum)
+$\parallel A \parallel_2 = max_{\lambda \in SPEC[A^T A]} \sqrt{\lambda}$ (max singular value)
+$\parallel A \parallel_\infty = max_{i = 1,...,m} \sum_{j=1}^{n} |a_{ij}| $ (max row sum)\\
+
+* $\mathcal{A}$ is continuous $\Leftrightarrow $ $\mathcal{A}$ is continuous at 0 $\Leftrightarrow$
+  \(\sup_{\parallel u \parallel_U = 1}\) $ \parallel \mathcal{A}(u) \parallel_V < \infty$, the induced norm $\parallel \mathcal{A} \parallel$ is well defined.\\
+Consider continuous linear functions $\mathcal{A}, \tilde{\mathcal{A}}: (V,F,\parallel \cdot \parallel_V) \rightarrow (W,F,\parallel \cdot \parallel_W),\ \mathcal{B}: (U,F,\parallel \cdot \parallel_U) \rightarrow (V,F,\parallel \cdot \parallel_V)$:\\
+1. $\forall v \in V, \parallel \mathcal(A)(v) \parallel_W \leq \parallel \mathcal{A} \parallel \cdot \parallel v \parallel_V$.\\
+2. $\forall a \in F, \parallel a \mathcal(A) \parallel = |a| \cdot \parallel \mathcal{A} \parallel$.\\
+3. $\parallel \mathcal{A} + \tilde{\mathcal{A}} \parallel \leq \parallel \mathcal{A} \parallel + \parallel \tilde{\mathcal{A}} \parallel$.\\
+4. $\parallel \mathcal{A} \parallel = 0 \Leftrightarrow \mathcal{A}(v)=0 for all v \in V$.\\
+5. $\parallel \mathcal{A} \circ \mathcal{B} \leq \parallel \mathcal{A} \parallel \cdot \parallel \mathcal{B} \parallel$.\\
+
+A function is \textbf{piecewise continuous} iff it's continuous at all $t \in \mathbb{R}$ except those in a set of discontinuity points $D \subseteq \mathbb{R}$ that satisfiy:\\
+1. $\forall \tau \in D$ left and right limits of u exist, i.e. $lim_{t\rightarrow \tau^+} u(t)$ and $lim_{t\rightarrow \tau^-} u(t)$ exist and are finite. Moreover, $u(\tau) = lim_{t\rightarrow \tau^+} u(t)$.\\
+2. $\forall t_0,t_1 \in \mathbb{R}$ with $t_0<t_1$, $D\cap [t_0, t_1]$ contains a finite number of points.\\
+
+The function $p: \mathbb{R}^n \times \mathbb{R} \rightarrow \mathbb{R}^n$ is \textbf{globally Lipschitz} in x iff there exists a piecewise continuous function $k: \mathbb{R} \rightarrow \mathbb{R}_+$ s.t.\\
+$\forall x,x' \in \mathbb{R}^n, \forall t\in\mathbb{R}\ \parallel p(x,t)-p(x',t) \parallel \leq k(t)\parallel x - x' \parallel$.\\
+
+\textbf{Existence and uniqueness} Assume $p: \mathbb{R}^n \times \mathbb{R} \rightarrow \mathbb{R}^n$ is piecewise continuous w.r.t. its second argument (with discontinuity set $D \subseteq \mathbb{R}$) and globally Lipschitz w.r.t. its first argument. Then for all $(t_0,x_0) \in \mathbb{R} \times \mathbb{R}^n$ there exists a unique continuous function $\phi: \mathbb{R} \times \mathbb{R}^n$ s.t.:\\
+1. $\phi(t_0) = x_0$.\\
+2. $\forall t \in \mathbb{R} \backslash D, \frac{d}{dt} \phi(t) = p(\phi(t),t)  $.\\ 
+
+*Let $\parallel \cdot \parallel$ be any norm on $\mathbb{R}^n$. Then for all $t_0,t_1 \in \mathbb{R},$\\
+$\parallel \int_{t_0}^{t_1} f(t) dt \parallel \leq | \int_{t_0}^{t_1} \parallel f(t) \parallel dt |$\\
+*1. $\forall m,k \in \mathbb{N}, (m+k)! \geq m!k!.$\\
+*2. $\forall c \in \mathbb{R}, lim_{m \rightarrow \infty} \frac{c^m}{m!}=0.$\\
+\textbf{Gronwall}: Consider $u(.),k(.): \mathbb{R} \rightarrow \mathbb{R}_+$ piecewice continuous, $c_1 \geq 0,$ and $t_0 \in \mathbb{R}$. If for all $t \in \mathbb{R}$, we have $u(t) \leq c_1 + |int_{t_0}^{t}k(\tau)u(\tau) d\tau|$. Then for all $t \in \mathbb{R}$, $u(t) \leq c_1exp|int_{t_0}^{t}k(\tau) d\tau|$.\\
+\textbf{Autonomous Systems}: does not depends explicitly on time, $\dot{x}(t) = p(x(t))$.\\
+*$s(t,t_0,x_0) = s(t-t_0,0,x_0)$
+
+
+
 
 % `\end` statements to match the `\begin`s.
 \end{multicols*}
