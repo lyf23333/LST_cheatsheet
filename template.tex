@@ -176,7 +176,7 @@ $f$ is continuous on U iff it's continuous everywhere.\\
 *All linear functions between finite dimensional spaces are always continuous.\\
 
 \textbf{Equivalence}:Consider a L.S. (V, F) with two norms, $\parallel \cdot \parallel_a$ and $\parallel \cdot \parallel_b$.. Th two norms are equivalent iff\\
-$\exists m_u \geq m_l \geq 0, \forall v \in V\ m_l\parallel v \parallel_a \leq \parallel v \parallel_b \leq \parallel v \parallel_a$.\\ 
+$\exists m_u \geq m_l \geq 0, \forall v \in V\ m_l\parallel v \parallel_a \leq \parallel v \parallel_b \leq m_u\parallel v \parallel_a$.\\ 
 
 \textbf{Weierstrass Theorem}: If $f: S \rightarrow \mathbb{R}$ is \underline{continuous} and set S is \underline{compact}, then $f$ attains a minimum on $S$.\\
 
@@ -192,7 +192,7 @@ $\parallel f(t) \parallel_\infty = max \parallel f(t) \parallel_2.$\\
 
 \textbf{Cauchy Sequence}: $\{v_i\}_{i=0} ^\infty$ is a C.S. iff\\
 $\forall \epsilon >0\ \exists N \in \mathbb{N}\ \forall m \geq N, \parallel v_m-n_N \parallel < \epsilon$.\\
-*Every convergent Sequence is Cauchy.\\
+*Every convergent Sequence is Cauchy. But Cauchy Sequence may not converge to a point!\\
 
 \textbf{Complete}: The normed space $(V, F, \parallel \cdot \parallel)$ is complete (or \textbf{Banach}) iff every Cauchy sequence converges.\\
 *Let $F = \mathbb{R}$ or $F = \mathbb{C}$ and if $(V,F)$ is finite-dimensional. Then $(V,F,\parallel \cdot \parallel)$ is a Banach Space for any norm $\parallel \cdot \parallel.$\\
