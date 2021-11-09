@@ -337,6 +337,8 @@ $y(t) = Ce^{At}x_0+(H*u)(t)$
 \textbf{Fact 5.2} $NULL[(A - \lambda I)^j] \subseteq NULL[(A - \lambda I)^(j+1)]$ for any $j = 1, 2, \cdots$ and there exists $j < n$ such that 
 $NULL[(A - \lambda I)^j] = NULL[(A - \lambda I)^(j+1)]$ \\
 
+
+
 \textbf{Jordan Chain}
 \begin{Figure}
 	\centering
@@ -348,6 +350,7 @@ $NULL[(A - \lambda I)^j] = NULL[(A - \lambda I)^(j+1)]$ \\
 	\includegraphics[width=\linewidth]{pictures/lem5_1.png}
 \end{Figure}
 
+
 \textbf{Jordan canonical form and Jordan blocks} The block diagonal matrix $J$ in Theorem 5.4 is the Jordan canonical form of the
 matrix $A$ and the matrices $J_i$ are the Jordan blocks of the matrix $A$.\\
 
@@ -357,12 +360,16 @@ matrix $A$ and the matrices $J_i$ are the Jordan blocks of the matrix $A$.\\
 	\includegraphics[width=\linewidth]{pictures/Th5_5.png}
 \end{Figure}
 
+$e^{At} = \sum_{\lambda \in SPEC[A]} \prod_\lambda \exp{\lambda t}$\\
+
 \textbf{Laplace Transformation} $f(\cdot): \mathbb{R}_+ \rightarrow \mathbb{R}^{n \times m}$ mapping the non-negative real numbers to the linear space of n × m real matrices: $F(s) = \mathcal{L} \{f(t) \} = \int_0^\infty f(t)e^{-st}dt \in \mathbb{C}^{n \times m}$\\
 
 \begin{Figure}
 	\centering
 	\includegraphics[width=\linewidth]{pictures/Fac5_5.png}
 \end{Figure}
+
+$(sI-A)^{-1} = \frac{M(s)}{\chi_A(s)}$, where $\chi_A(x) = s^n + \chi_1 s^{n-1} + ... + \chi_n$ and $M(s) = M_0 s^{n-1} + ... + M_{n-2}s + M_{n-1}$\\
 
 \begin{Figure}
 	\centering
