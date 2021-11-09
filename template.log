@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.5.27)  8 NOV 2021 17:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.5.27)  9 NOV 2021 13:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -524,7 +524,7 @@ File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <7> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 109.
-<pictures/basis.png, id=16, 585.68813pt x 72.77188pt>
+<pictures/basis.png, id=20, 585.68813pt x 72.77188pt>
 File: pictures/basis.png Graphic file (type png)
 <use pictures/basis.png>
 Package pdftex.def Info: pictures/basis.png  used on input line 146.
@@ -532,19 +532,98 @@ Package pdftex.def Info: pictures/basis.png  used on input line 146.
  [1
 
 {c:/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./pictures/basi
-s.PNG>] [2]
-(./template.aux)
+s.PNG>]
+<pictures/Th4_1.png, id=39, 449.2785pt x 258.9675pt>
+File: pictures/Th4_1.png Graphic file (type png)
+<use pictures/Th4_1.png>
+Package pdftex.def Info: pictures/Th4_1.png  used on input line 279.
+(pdftex.def)             Requested size: 196.53482pt x 113.28613pt.
+<pictures/Th4_3.png, id=40, 381.22424pt x 71.0655pt>
+File: pictures/Th4_3.png Graphic file (type png)
+<use pictures/Th4_3.png>
+Package pdftex.def Info: pictures/Th4_3.png  used on input line 301.
+(pdftex.def)             Requested size: 196.53482pt x 36.63654pt.
+<pictures/Col5_1(1).png, id=41, 335.45325pt x 55.407pt>
+File: pictures/Col5_1(1).png Graphic file (type png)
+<use pictures/Col5_1(1).png>
+Package pdftex.def Info: pictures/Col5_1(1).png  used on input line 315.
+(pdftex.def)             Requested size: 196.53482pt x 32.4624pt.
+<pictures/Col5_1(2).png, id=42, 364.9635pt x 162.6075pt>
+File: pictures/Col5_1(2).png Graphic file (type png)
+<use pictures/Col5_1(2).png>
+Package pdftex.def Info: pictures/Col5_1(2).png  used on input line 319.
+(pdftex.def)             Requested size: 196.53482pt x 87.56606pt.
+<pictures/Fac5_1.png, id=43, 255.95625pt x 51.7935pt>
+File: pictures/Fac5_1.png Graphic file (type png)
+<use pictures/Fac5_1.png>
+Package pdftex.def Info: pictures/Fac5_1.png  used on input line 329.
+(pdftex.def)             Requested size: 196.53482pt x 39.76967pt.
+<pictures/Fac5_4.png, id=44, 442.65375pt x 211.992pt>
+File: pictures/Fac5_4.png Graphic file (type png)
+<use pictures/Fac5_4.png>
+Package pdftex.def Info: pictures/Fac5_4.png  used on input line 343.
+(pdftex.def)             Requested size: 196.53482pt x 94.12425pt.
+<pictures/lem5_1.png, id=45, 448.67625pt x 251.7405pt>
+File: pictures/lem5_1.png Graphic file (type png)
+<use pictures/lem5_1.png>
+Package pdftex.def Info: pictures/lem5_1.png  used on input line 348.
+(pdftex.def)             Requested size: 196.53482pt x 110.27063pt.
+<pictures/Th5_5.png, id=46, 436.63126pt x 70.46326pt>
+File: pictures/Th5_5.png Graphic file (type png)
+<use pictures/Th5_5.png>
+Package pdftex.def Info: pictures/Th5_5.png  used on input line 357.
+(pdftex.def)             Requested size: 196.53482pt x 31.71677pt.
+<pictures/Fac5_5.png, id=47, 437.2335pt x 225.84375pt>
+File: pictures/Fac5_5.png Graphic file (type png)
+<use pictures/Fac5_5.png>
+Package pdftex.def Info: pictures/Fac5_5.png  used on input line 364.
+(pdftex.def)             Requested size: 196.53482pt x 101.51846pt.
+<pictures/Lem5_2.png, id=48, 334.851pt x 69.25874pt>
+File: pictures/Lem5_2.png Graphic file (type png)
+<use pictures/Lem5_2.png>
+Package pdftex.def Info: pictures/Lem5_2.png  used on input line 369.
+(pdftex.def)             Requested size: 196.53482pt x 40.65092pt.
+<pictures/Th5_6.png, id=49, 440.847pt x 43.96425pt>
+File: pictures/Th5_6.png Graphic file (type png)
+<use pictures/Th5_6.png>
+Package pdftex.def Info: pictures/Th5_6.png  used on input line 374.
+(pdftex.def)             Requested size: 196.53482pt x 19.59923pt.
+<pictures/Col5_2.png, id=50, 440.847pt x 28.908pt>
+File: pictures/Col5_2.png Graphic file (type png)
+<use pictures/Col5_2.png>
+Package pdftex.def Info: pictures/Col5_2.png  used on input line 379.
+(pdftex.def)             Requested size: 196.53482pt x 12.88716pt.
+<pictures/Th5_7.png, id=51, 391.4625pt x 106.59825pt>
+File: pictures/Th5_7.png Graphic file (type png)
+<use pictures/Th5_7.png>
+Package pdftex.def Info: pictures/Th5_7.png  used on input line 384.
+(pdftex.def)             Requested size: 196.53482pt x 53.51857pt.
+<pictures/Def5_7.png, id=52, 359.54324pt x 66.2475pt>
+File: pictures/Def5_7.png Graphic file (type png)
+<use pictures/Def5_7.png>
+Package pdftex.def Info: pictures/Def5_7.png  used on input line 389.
+(pdftex.def)             Requested size: 196.53482pt x 36.21283pt.
+<pictures/Def5_8.png, id=53, 438.438pt x 30.1125pt>
+File: pictures/Def5_8.png Graphic file (type png)
+<use pictures/Def5_8.png>
+Package pdftex.def Info: pictures/Def5_8.png  used on input line 394.
+(pdftex.def)             Requested size: 196.53482pt x 13.49857pt.
+ [2 <./pictures/Th4_1.png> <./pictures/Th4_3.png> <./pictures/Col5_1(1).png> <.
+/pictures/Col5_1(2).png> <./pictures/Fac5_1.png> <./pictures/Fac5_4.png> <./pic
+tures/lem5_1.png> <./pictures/Th5_5.png> <./pictures/Fac5_5.png> <./pictures/Le
+m5_2.png> <./pictures/Th5_6.png> <./pictures/Col5_2.png> <./pictures/Th5_7.png>
+ <./pictures/Def5_7.png> <./pictures/Def5_8.png>] (./template.aux)
 Package rerunfilecheck Info: File `template.out' has not changed.
-(rerunfilecheck)             Checksum: C832CDEFA8D9E623E1AF419EFEE8882B;443.
+(rerunfilecheck)             Checksum: 79BFDED93FE5C8A7F04522ECDFE75670;659.
  ) 
 Here is how much of TeX's memory you used:
- 9897 strings out of 478754
- 142294 string characters out of 5858221
+ 10005 strings out of 478754
+ 144661 string characters out of 5858221
  503023 words of memory out of 5000000
- 27475 multiletter control sequences out of 15000+600000
+ 27567 multiletter control sequences out of 15000+600000
  406936 words of font info for 40 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,10n,66p,444b,491s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,10n,66p,444b,492s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/tex
 live/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb><c:/texlive/2021/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb><c:/texlive/2021/texmf-dist
@@ -558,10 +637,10 @@ mr5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:
 dist/fonts/type1/public/amsfonts/cm/cmti7.pfb><c:/texlive/2021/texmf-dist/fonts
 /type1/public/amsfonts/symbols/msbm7.pfb><c:/texlive/2021/texmf-dist/fonts/type
 1/public/cm-super/sfrm0700.pfb>
-Output written on template.pdf (2 pages, 196516 bytes).
+Output written on template.pdf (2 pages, 869309 bytes).
 PDF statistics:
- 86 PDF objects out of 1000 (max. 8388607)
- 66 compressed objects within 1 object stream
- 6 named destinations out of 1000 (max. 500000)
- 30 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 122 PDF objects out of 1000 (max. 8388607)
+ 72 compressed objects within 1 object stream
+ 7 named destinations out of 1000 (max. 500000)
+ 113 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -233,8 +233,6 @@ $\parallel \int_{t_0}^{t_1} f(t) dt \parallel \leq | \int_{t_0}^{t_1} \parallel 
 *$s(t,t_0,x_0) = s(t-t_0,0,x_0)$
 
 
-
-
 \newpage
 \section{4. Time varying linear systems}
 $\dot{x}(t) = f(x(t), u(t)) = A(t)x(t) + B(t)u(t)$ \qquad (1)\\
@@ -248,26 +246,26 @@ $\dot{x}(t) = f(x^*(t)+e_x(t), u^*(t)+e_u(t))=f(x^*(t), u^*(t))+\frac{\partial{f
 where 
 $
 \frac{\partial{f}}{\partial{x}}(x^*(t), u^*(t)) = \left[ \begin{array}{ccc} \frac{\partial{f_1}}{\partial{x_1}}(x^*(t), u^*(t)) & \cdots & \frac{\partial{f_1}}{\partial{x_n}}(x^*(t), u^*(t))\\
-\vdots & \ddots & \vdots \\
-\frac{\partial{f_n}}{\partial{x_1}}(x^*(t), u^*(t)) & \cdots & \frac{\partial{f_n}}{\partial{x_n}}(x^*(t), u^*(t))
+	\vdots & \ddots & \vdots \\
+	\frac{\partial{f_n}}{\partial{x_1}}(x^*(t), u^*(t)) & \cdots & \frac{\partial{f_n}}{\partial{x_n}}(x^*(t), u^*(t))
 \end{array} \right] = A(t)
 $,\\
 $
 \frac{\partial{f}}{\partial{u}}(x^*(t), u^*(t)) = \left[ \begin{array}{ccc} \frac{\partial{f_1}}{\partial{u_1}}(x^*(t), u^*(t)) & \cdots & \frac{\partial{f_1}}{\partial{u_m}}(x^*(t), u^*(t))\\
-\vdots & \ddots & \vdots \\
-\frac{\partial{f_n}}{\partial{u_1}}(x^*(t), u^*(t)) & \cdots & \frac{\partial{f_n}}{\partial{u_m}}(x^*(t), u^*(t))
+	\vdots & \ddots & \vdots \\
+	\frac{\partial{f_n}}{\partial{u_1}}(x^*(t), u^*(t)) & \cdots & \frac{\partial{f_n}}{\partial{u_m}}(x^*(t), u^*(t))
 \end{array} \right] = B(t)
 $\\
 $\frac{d}{dt}(e_x(t))=A(t)e_x(t)+B(t)e_u(t)$\\
 \textbf{Existence and structure of solutions}
 \begin{tabular}{|c|c|c|c|}
-\hline
- & $(X, \mathbb{R})$ & $(U, \mathbb{R})$ & $(Y, \mathbb{R})$\\
-\hline
-base & $ \{ e_i \}_{i=1}^n $ & $\{f_i\}_{i=1}^m $ & $\{g_i\}_{i=1}^p $\\
-\hline
-dim. & n & m & p\\
-\hline
+	\hline
+	& $(X, \mathbb{R})$ & $(U, \mathbb{R})$ & $(Y, \mathbb{R})$\\
+	\hline
+	base & $ \{ e_i \}_{i=1}^n $ & $\{f_i\}_{i=1}^m $ & $\{g_i\}_{i=1}^p $\\
+	\hline
+	dim. & n & m & p\\
+	\hline
 \end{tabular}\\
 \textit{Assump 4.1}: $A(\cdot)$, $B(\cdot)$, $C(\cdot)$, $D(\cdot)$ are piecewise continuous.
 \textit{Fact 4.1}: For all $u(\cdot): \mathbb{R} \rightarrow \mathbb{R}^m$ piecewise continuous and all $(t_0, x_0) \in \mathbb{R} \times \mathbb{R}_n$ there exists \textsc{unique} solution $x(\cdot):  \rightarrow \mathbb{R}^n$ and $y(\cdot):  \rightarrow \mathbb{R}^p$ for the system (1) and (2).\\
@@ -275,6 +273,129 @@ The unique solution of (1) and (2)\\
 \textbf{State transition matrix}: $x(t) = s(t, t_0, x_0, u)$,\\
 \textbf{Output response map}: $y(t) = \rho(t, t_0, x_0, u)$
 % `\end` statements to match the `\begin`s.
+\textbf{Theorem 4.1}
+\begin{Figure}
+	\centering
+	\includegraphics[width=\linewidth]{pictures/Th4_1.png}
+\end{Figure}
+\textbf{State transition matrix} $\phi(t, t_0)$ \\
+$s(t, t_0, x_0, 0)=\phi(t, t_0)x_0$
+
+\textbf{Theorem 4.2} $\phi(t, t_0)$ has the following properties:\\
+1. $\phi(\cdot, t_0): \mathbb{R} \rightarrow \mathbb{R}^{n \times n}$ is the \textsc{unique} solution of the linear matrix ODE:\\
+$\frac{\partial}{\partial t}\phi(t, t_0) = A(t)\phi(t, t_0)$ with $\phi(t_0, t_0) = I$\\
+Hence it is \textsc{continuous} for all $t \in \mathbb{R}$ and \textsc{differentiable} everywhere except at the discontinuity points of $A(t)$\\
+2. $\phi(t, t_0) = \phi(t, t_1)\phi(t_1, t_0)$ for all $t$, $t_0$, $t_1$\\
+3. $[ \phi(t_1, t_0)]^{-1} = \phi(t0, t_1)$. $\phi(t_1, t_0)$ is invertible for all $t$, $t_0$, $t_1$ \\
+
+\textbf{Fact}: If A(t) and its integral commute, then $\phi(t, t_0) = \exp^{\int_{t_0}^{t}A(\tau)d\tau}$\\
+Following matrices commute with integral:\\
+1.$A(t)=w(t)*\bar{A}, w: \mathbb{R} \rightarrow \mathbb{R}$ and $\bar{A}$ constant matrix
+2.$A(t) \in \mathbb{R}$ scalar
+3.$A(t)$ diagonal matrix
+4.$A(t) = \bar{A}$ constant matrix\\
+
+\textbf{Theorem 4.3} for all $t$, $t_0 \in \mathbb{R}$, $u(\cdot) \in PC(\mathbb{R}, \mathbb{R}^m)$
+\begin{Figure}
+	\centering
+	\includegraphics[width=\linewidth]{pictures/Th4_3.png}
+\end{Figure}
+
+\textbf{The rule of Leibniz}
+$\frac{d}{dt}[ \int_{a(t)}^{b(t)} f(t, \tau) d\tau ] = \int_{a(t)}^{b(t)} \frac{\partial}{\partial t}f(t, \tau) d\tau + f(t, b(t))\frac{d}{dt}b(t) - f(t, a(t))\frac{d}{dt}a(t)$ \\
+
+\section{5. Time invariant linear systems}
+$\dot{x}(t) = Ax(t) + Bu(t)$ \qquad (3)\\
+$y(t) = Cx(t) + Du(t)$ \qquad (4)\\
+$e^{At} = I + At + \frac{A^2t^2}{2!} + \cdots + \frac{A^kt^k}{k!} \in \mathbb{R}^{n \times n}$\\
+\textbf{Theorem 5.1} $\phi(t, t_0) = e^{A(t-t_0}$ for all $t$, $t_0 \in \mathbb{R}_+$
+\textbf{Corollary 5.1} The state transition matrix, solution, impulse transition,and impulse response of a time invariant linear system satisfying the following properties:
+\begin{Figure}
+	\centering
+	\includegraphics[width=\linewidth]{pictures/Col5_1(1).png}
+\end{Figure}
+\begin{Figure}
+	\centering
+	\includegraphics[width=\linewidth]{pictures/Col5_1(2).png}
+\end{Figure}
+For $t_0$ = 0:\\
+$x(t) = e^{At}x_0+(K*u)(t)$, 
+$y(t) = Ce^{At}x_0+(H*u)(t)$
+\textbf{Semi-simple} A matrix $A \in \mathbb{R}^{n \times n}$ is semi-simple if and only if there exists right eigenvectors $\{v_i \}^n_{i=1} \in \mathbb{C}^n$ that are linearly independent in the linear space $(\mathbb{C}^n, \mathbb{C})$ \\
+\textbf{Theorem 5.2} Matrix $A \in \mathbb{R}^{n \times n}$ is semi-simple if and only if there exists a nonsingular matrix $T \in \mathbb{C}^{n \times n}$ and a diagonal matrix $\Lambda \in \mathbb{C}^{n \times n}$ such that $A = T^{-1} \Lambda T$ with $T = [v_1 v_2 \cdots v_n]^{-1}$\\
+\textbf{Fact 5.1} If $A$ is semi-simple 
+\begin{Figure}
+	\centering
+	\includegraphics[width=\linewidth]{pictures/Fac5_1.png}
+\end{Figure}
+
+\textbf{Simple} A matrix $A \in \mathbb{R}^{n \times n}$ is simple if and only if its eigenvalues are distinct, i.e. $\lambda_i \neq \lambda_j$ for all $i \neq j$
+\textbf{Theorem 5.3} All simple matrices are semi-simple\\
+
+\textbf{Jordan form} The algebraic multiplicity of an eigenvalue $\lambda \in \mathbb{C}$ of a matrix $A \in \mathbb{R}^{n \times n}$ is the number of times $\lambda$ appears in the spectrum $SPEC[A]$. The geometric multiplicity of $\lambda$ is the dimension of $NULL[A - \lambda I]$\\
+
+\textbf{Fact 5.2} $NULL[(A - \lambda I)^j] \subseteq NULL[(A - \lambda I)^(j+1)]$ for any $j = 1, 2, \cdots$ and there exists $j < n$ such that 
+$NULL[(A - \lambda I)^j] = NULL[(A - \lambda I)^(j+1)]$ \\
+
+\textbf{Jordan Chain}
+\begin{Figure}
+	\centering
+	\includegraphics[width=\linewidth]{pictures/Fac5_4.png}
+\end{Figure}
+
+\begin{Figure}
+	\centering
+	\includegraphics[width=\linewidth]{pictures/lem5_1.png}
+\end{Figure}
+
+\textbf{Jordan canonical form and Jordan blocks} The block diagonal matrix $J$ in Theorem 5.4 is the Jordan canonical form of the
+matrix $A$ and the matrices $J_i$ are the Jordan blocks of the matrix $A$.\\
+
+\textbf{Theorem 5.5} $e^{At} = T^{-1}e^{Jt}T$, where
+\begin{Figure}
+	\centering
+	\includegraphics[width=\linewidth]{pictures/Th5_5.png}
+\end{Figure}
+
+\textbf{Laplace Transformation} $f(\cdot): \mathbb{R}_+ \rightarrow \mathbb{R}^{n \times m}$ mapping the non-negative real numbers to the linear space of n × m real matrices: $F(s) = \mathcal{L} \{f(t) \} = \int_0^\infty f(t)e^{-st}dt \in \mathbb{C}^{n \times m}$\\
+
+\begin{Figure}
+	\centering
+	\includegraphics[width=\linewidth]{pictures/Fac5_5.png}
+\end{Figure}
+
+\begin{Figure}
+	\centering
+	\includegraphics[width=\linewidth]{pictures/Lem5_2.png}
+\end{Figure}
+
+\begin{Figure}
+	\centering
+	\includegraphics[width=\linewidth]{pictures/Th5_6.png}
+\end{Figure}
+
+\begin{Figure}
+	\centering
+	\includegraphics[width=\linewidth]{pictures/Col5_2.png}
+\end{Figure}
+
+\begin{Figure}
+	\centering
+	\includegraphics[width=\linewidth]{pictures/Th5_7.png}
+\end{Figure}
+
+\begin{Figure}
+	\centering
+	\includegraphics[width=\linewidth]{pictures/Def5_7.png}
+\end{Figure}
+
+\begin{Figure}
+	\centering
+	\includegraphics[width=\linewidth]{pictures/Def5_8.png}
+\end{Figure}
+
+
+
 \end{multicols*}
 
 \end{document}
